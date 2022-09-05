@@ -1,0 +1,91 @@
+:root{
+    --cor1: #252336;
+    --cor2: #101938;
+    --cor3: #193464;
+    --cor4: #fff;
+    --cor5: rgba(0, 0, 0, 0.2);
+    --cor6: rgba(0, 0, 0, 0.5);
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(var(--cor1), var(--cor2));
+}
+.title{
+    font-size: 85px;
+    color: var(--cor4);
+    animation: titleanimation 1.5s;
+}
+@keyframes titleanimation {
+     from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg)
+    };    
+}
+.containerInput{
+    background-color: var(--cor5);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px var(--cor6);
+}
+.containerInput input{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--cor4);
+    outline: none;
+    margin-right: 8px;
+
+}
+.buttonSearch{
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5;
+    color: var(--cor4);
+}
+
+.buttonSearch:hover{
+    transform: scale(1.2);
+
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor6);
+    width: 500px;
+    border-radius: 8px;
+    color: var(--cor4);
+}
+.main h2{
+    margin: 16px 0;
+    font-size: 39px;
+}
+.main span{
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+@media (max-width: 620px){
+    .title{
+        font-size: 60px;
+    }
+}
+.main h2{
+    font-size: 28px;
+}
+.main{
+    width: 30%;
+    min-width: 250px;
+}
